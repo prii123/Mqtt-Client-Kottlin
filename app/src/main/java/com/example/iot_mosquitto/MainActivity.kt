@@ -168,6 +168,12 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        servo_motor_principal.setOnClickListener(object : OnClickListener{
+            override fun onClick(p0: View?) {
+                activarServoMotorPrincipal()
+            }
+        })
+
 
     }
 
@@ -194,5 +200,20 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun activarServoMotorPrincipal() {
+        val mqttClient = MQTTClient()
+        mqttClient.connect()
 
+
+        val topic = "esp32/motorCompuerta"
+        val message = "true"
+        val qos = 0
+
+
+        mqttClient.publishMessage(topic, message, qos)
+        mqttClient.disconnect()
+
+
+
+    }
 }

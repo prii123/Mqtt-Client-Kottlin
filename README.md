@@ -3,6 +3,7 @@
 
 2. crear una clase llamada MQTTClient de la siguiente forma
 
+(``` 
 import org.eclipse.paho.client.mqttv3.*
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence
 
@@ -34,8 +35,10 @@ class MQTTClient {
     }
 }
 
-3. utilizar el subscriptor para obtener los datos que nececites de la siguiente forma
+```)
 
+3. utilizar el subscriptor para obtener los datos que nececites de la siguiente forma
+(``` 
 val mqttClient = MQTTClient()
         mqttClient.connect()
         mqttClient.subscribeToTopic("test", 0, object : IMqttMessageListener {
@@ -44,3 +47,4 @@ val mqttClient = MQTTClient()
                 Log.d("TAG", " !!!!!!!!!!!!!!!!!!!!!!!!!!!!!  "+message.toString())
             }
         })
+```)
