@@ -2,7 +2,8 @@
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5'
 
 2. crear una clase llamada MQTTClient de la siguiente forma
-{
+
+```kottlin
 
 import org.eclipse.paho.client.mqttv3.*
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence
@@ -35,20 +36,20 @@ class MQTTClient {
     }
 }
 
+```
 
 
-}
 
 
 
 3. utilizar el subscriptor para obtener los datos que nececites de la siguiente forma
-{
+```kottlin
 val mqttClient = MQTTClient()
         mqttClient.connect()
         mqttClient.subscribeToTopic("test", 0, object : IMqttMessageListener {
             override fun messageArrived(topic: String?, message: MqttMessage?) {
                 // Aquí puedes manejar el mensaje recibido en este caso lo estoy imprimiendo por consola
-                Log.d("TAG", " !!!!!!!!!!!!!!!!!!!!!!!!!!!!!  "+message.toString())
+                Log.d("TAG", "!!  "+message.toString())
             }
         })
-}
+```
