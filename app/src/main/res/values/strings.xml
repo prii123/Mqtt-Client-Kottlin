@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">IOT_Mosquitto</string>
+    <string name="app_name">ITM Internet de las Cosas</string>
+    <string name="mensajeInicial">-</string>
+    <string name="estado_total_del_dispensador">Estado total del dispensador</string>
+    <string name="prender_bombillo_manual">Prender bombillo manual</string>
+    <string name="activar">ACTIVAR</string>
+    <string name="servo_motor_principal">Servo Motor Principal</string>
 </resources>

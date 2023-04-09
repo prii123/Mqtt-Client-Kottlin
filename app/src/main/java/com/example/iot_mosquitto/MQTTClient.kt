@@ -7,7 +7,7 @@ class MQTTClient {
     private val brokerUrl = "tcp://192.168.20.55:1883"
     private val clientId = "android-client"
     private val persistence = MemoryPersistence()
-    private val mqttClient = MqttClient(brokerUrl, clientId, persistence)
+    private val mqttClient = MqttClient(brokerUrl,MqttClient.generateClientId(), persistence)
 
     fun connect() {
         val options = MqttConnectOptions()
