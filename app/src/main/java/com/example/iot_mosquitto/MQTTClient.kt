@@ -3,8 +3,8 @@ package com.example.iot_mosquitto
 import org.eclipse.paho.client.mqttv3.*
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence
 
-class MQTTClient {
-    private val brokerUrl = "tcp://192.168.20.55:1883"
+class MQTTClient(ipDireccion : String) {
+    private val brokerUrl = ipDireccion // "tcp://192.168.20.55:1883"
     private val clientId = "android-client"
     private val persistence = MemoryPersistence()
     private val mqttClient = MqttClient(brokerUrl,MqttClient.generateClientId(), persistence)

@@ -5,4 +5,9 @@
     <string name="prender_bombillo_manual">Prender bombillo manual</string>
     <string name="activar">ACTIVAR</string>
     <string name="servo_motor_principal">Servo Motor Principal</string>
+    <string name="direccion_ip_broker">Direccion IP Broker</string>
+    <string name="incerta_la_direccion_ip_del_broker">Incerta La direccion IP del Broker</string>
+    <string name="guardar">Guardar</string>
+    <string name="ip_ejemplo">192.168.0.0</string>
+    <string name="para_cambiar_doble_click_y_192_168_0_0">Para cambiar Click y tu direccion IP 192.168.0.0</string>
 </resources>
